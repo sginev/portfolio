@@ -1,0 +1,13 @@
+image: gitpod/workspace-full 
+tasks:
+  - name: SERVE
+    init: npm install
+    command: npm run start
+    openIn: right
+    openMode: tab-before
+    command: live-server
+ports:
+  - port: 3000
+    onOpen: open-browser
+  - port: 3001
+    onOpen: ignore
