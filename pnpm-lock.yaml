@@ -1,27 +1,33 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@types/js-yaml': ^4.0.5
   '@types/react': ^18.0.20
   '@types/typography': ^0.16.4
   gatsby: ^4.23.0
   gatsby-plugin-pnpm: ^1.2.10
   gatsby-source-filesystem: ^4.23.0
   gatsby-transformer-remark: ^5.23.0
+  js-yaml: ^4.1.0
   prettier: ^2.7.1
   react: ^18.1.0
   react-dom: ^18.1.0
   typography: ^0.16.21
+  yamljs: ^0.3.0
 
 dependencies:
+  '@types/js-yaml': 4.0.5
   '@types/react': 18.0.20
   '@types/typography': 0.16.4
   gatsby: 4.23.0_o7dgjljkiwv4dmt6bfgpnh6yva
   gatsby-plugin-pnpm: 1.2.10_gatsby@4.23.0
   gatsby-source-filesystem: 4.23.0_gatsby@4.23.0
   gatsby-transformer-remark: 5.23.0_gatsby@4.23.0
+  js-yaml: 4.1.0
   react: 18.1.0
   react-dom: 18.1.0_react@18.1.0
   typography: 0.16.21
+  yamljs: 0.3.0
 
 devDependencies:
   prettier: 2.7.1
@@ -2486,6 +2492,10 @@ packages:
       '@types/node': 18.7.18
     dev: false
 
+  /@types/js-yaml/4.0.5:
+    resolution: {integrity: sha512-FhpRzf927MNQdRZP0J5DLIdTXhjLYzeUTmLAu69mnVksLH9CJY3IuSeEgbKUki7GQZm0WqDkGzyxju2EZGD2wA==}
+    dev: false
+
   /@types/json-schema/7.0.11:
     resolution: {integrity: sha512-wOuvG1SN4Us4rez+tylwwwCV1psiNVOkJeM3AUWUNWg/jDQY2+HE/444y5gc+jBmRqASOm2Oeh5c1axHobwRKQ==}
     dev: false
@@ -2983,6 +2993,10 @@ packages:
     resolution: {integrity: sha512-o5Roy6tNG4SL/FOkCAN6RzjiakZS25RLYFrcMttJqbdd8BWrnA+fGz57iN5Pb06pvBGvl5gQ0B48dJlslXvoTg==}
     dependencies:
       sprintf-js: 1.0.3
+    dev: false
+
+  /argparse/2.0.1:
+    resolution: {integrity: sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==}
     dev: false
 
   /aria-query/4.2.2:
@@ -6974,6 +6988,13 @@ packages:
       esprima: 4.0.1
     dev: false
 
+  /js-yaml/4.1.0:
+    resolution: {integrity: sha512-wpxZs9NoxZaJESJGIZTyDEaYpl0FKSA+FB9aJiyemKhMwkxQg63h4T1KJgUGHpTqPDNRcmmYLugrRjJlBtWvRA==}
+    hasBin: true
+    dependencies:
+      argparse: 2.0.1
+    dev: false
+
   /jsesc/0.5.0:
     resolution: {integrity: sha512-uZz5UnB7u4T9LvwmFqXii7pZSouaRPorGs5who1Ip7VO0wxanFvBL7GkM6dTHlgX+jhBApRetaWpnDabOeTcnA==}
     hasBin: true
@@ -10785,6 +10806,14 @@ packages:
   /yaml/1.10.2:
     resolution: {integrity: sha512-r3vXyErRCYJ7wg28yvBY5VSoAF8ZvlcW9/BwUzEtUsjvX/DKs24dIkuwjtuprwJJHsbyUbLApepYTR1BN4uHrg==}
     engines: {node: '>= 6'}
+    dev: false
+
+  /yamljs/0.3.0:
+    resolution: {integrity: sha512-C/FsVVhht4iPQYXOInoxUM/1ELSf9EsgKH34FofQOp6hwCPrW4vG4w5++TED3xRUo8gD7l0P1J1dLlDYzODsTQ==}
+    hasBin: true
+    dependencies:
+      argparse: 1.0.10
+      glob: 7.2.3
     dev: false
 
   /yargs-parser/18.1.3:
