@@ -1,0 +1,21 @@
+body {
+  background: #101216;
+  color: #abc;
+}
+
+#gatsby-focus-wrapper {
+  display: grid;
+  justify-content: center;
+}
+
+#app {
+  max-width: 800px;
+  margin-bottom: 50vh;
+}
+
+h1 {
+  margin: 20vh 0;
+}
+section {
+  margin: 10vh 0;
+}

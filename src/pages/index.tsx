@@ -8,12 +8,21 @@ import YAMLData from "../../content/data.yaml"
 // @ts-ignore
 import yamlPages from "../../content/index.yaml"
 
-import "./index.scss"
+import "./index.css"
+
+import Headroom from "react-headroom"
 
 const typography = new Typography({
-  baseFontSize: "18px",
+  baseFontSize: "25px",
   baseLineHeight: 1.45,
-  headerFontFamily: ['Avenir Next', 'Helvetica Neue', 'Segoe UI', 'Helvetica', 'Arial', 'sans-serif'],
+  headerFontFamily: [
+    "Avenir Next",
+    "Helvetica Neue",
+    "Segoe UI",
+    "Helvetica",
+    "Arial",
+    "sans-serif",
+  ],
   bodyFontFamily: ["Calibri", "Georgia", "serif"],
   // See below for the full list of options.
   scaleRatio: 4,
@@ -25,19 +34,26 @@ typography.injectStyles()
 
 export default function Home() {
   return (
-    <div className="app">
-      <h1>Hello world!</h1>
-      <p>What a world.</p>
-      <p>It's a beautiful day today.</p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe odit
-        natus obcaecati ad, nisi voluptatum ea magnam eius, cum, quibusdam fuga
-        aliquid minima ipsa consequatur sit mollitia cumque repudiandae commodi.
-      </p>
+    <>
+      <Headroom>
+        <pre>You can put anything you'd like inside the Headroom Component</pre>
+      </Headroom>
+      <div id="app">
+        <h1>Hello world!</h1>
 
-      <h1>YAML Data</h1>
+        <section>
+          <p>What a world.</p>
+          <p>It's a beautiful day today.</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe odit
+            natus obcaecati ad, nisi voluptatum ea magnam eius, cum, quibusdam
+            fuga aliquid minima ipsa consequatur sit mollitia cumque repudiandae
+            commodi.
+          </p>
+        </section>
 
-      <div>
+        <h1>YAML Data</h1>
+
         {yamlPages.map((page, index) => {
           return (
             <section>
@@ -51,10 +67,10 @@ export default function Home() {
             </section>
           )
         })}
-      </div>
 
-      {/* <YAMLbuildtime /> */}
-    </div>
+        {/* <YAMLbuildtime /> */}
+      </div>
+    </>
   )
 }
 
