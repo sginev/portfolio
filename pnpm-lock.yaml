@@ -1,6 +1,8 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@types/react': ^18.0.20
+  '@types/typography': ^0.16.4
   gatsby: ^4.23.0
   gatsby-plugin-pnpm: ^1.2.10
   gatsby-source-filesystem: ^4.23.0
@@ -11,6 +13,8 @@ specifiers:
   typography: ^0.16.21
 
 dependencies:
+  '@types/react': 18.0.20
+  '@types/typography': 0.16.4
   gatsby: 4.23.0_o7dgjljkiwv4dmt6bfgpnh6yva
   gatsby-plugin-pnpm: 1.2.10_gatsby@4.23.0
   gatsby-source-filesystem: 4.23.0_gatsby@4.23.0
@@ -2582,6 +2586,10 @@ packages:
 
   /@types/tmp/0.0.33:
     resolution: {integrity: sha512-gVC1InwyVrO326wbBZw+AO3u2vRXz/iRWq9jYhpG4W8LXyIgDv3ZmcLQ5Q4Gs+gFMyqx+viFoFT+l3p61QFCmQ==}
+    dev: false
+
+  /@types/typography/0.16.4:
+    resolution: {integrity: sha512-/dGcnJhnkPVlP1A5wDhRhvfvyqJ9yePHyNKRjcR701vMGjDsTnIN3C+l33blkwijtEoQgN8g1CZhbkks1DyBfw==}
     dev: false
 
   /@types/unist/2.0.6:

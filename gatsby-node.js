@@ -1,7 +1,7 @@
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
 
-  const template = require.resolve(`./src/templates/template.js`)
+  const template = require.resolve(`./src/templates/template.tsx`)
 
   const result = await graphql(`
     {
