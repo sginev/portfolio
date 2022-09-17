@@ -7,6 +7,7 @@
 module.exports = {
   /* Your site config here */
   plugins: [
+    `gatsby-plugin-pnpm`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
