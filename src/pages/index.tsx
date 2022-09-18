@@ -11,6 +11,7 @@ import yamlPages from "../../content/index.yaml"
 import "./index.css"
 
 import Headroom from "react-headroom"
+import { InView } from "react-intersection-observer"
 
 const typography = new Typography({
   baseFontSize: "25px",
@@ -40,9 +41,13 @@ export default function Home() {
       </Headroom>
 
       <div id="app">
-        <h1>Hello world!</h1>
+        {/* <h1 className="ani-grani">Hello world!</h1> */}
 
-        <section>
+        <h1>
+          <StaggerLetters>Hello world!</StaggerLetters>
+        </h1>
+
+        <AnimateIntoView as="section">
           <p>What a world.</p>
           <p>It's a beautiful day today.</p>
           <p>
@@ -51,13 +56,17 @@ export default function Home() {
             fuga aliquid minima ipsa consequatur sit mollitia cumque repudiandae
             commodi.
           </p>
-        </section>
+        </AnimateIntoView>
 
-        <h1>YAML Data</h1>
+        {/* <h1 className="ani-grani">YAML Data</h1> */}
+
+        <h1>
+          <StaggerLetters>YAML Data</StaggerLetters>
+        </h1>
 
         {yamlPages.map((page, index) => {
           return (
-            <section>
+            <AnimateIntoView as="section" key={index}>
               <h2>{page.name}</h2>
               {page.content.map((data, index) => {
                 return <p> {data.item} </p>
@@ -65,23 +74,38 @@ export default function Home() {
               {page.links.map((data, index) => {
                 return <a> {data.item} </a>
               })}
-            </section>
+            </AnimateIntoView>
           )
         })}
-
-        {/* <YAMLbuildtime /> */}
       </div>
     </>
   )
 }
 
-const YAMLbuildtime = () => (
-  <div style={{ maxWidth: `960px`, margin: `1.45rem` }}>
-    <h1>{YAMLData.title}</h1>
-    <ul>
-      {YAMLData.content.map((data, index) => {
-        return <li key={`content_item_${index}`}>{data.item}</li>
-      })}
-    </ul>
-  </div>
+const StaggerLetters = (
+  props: { [key: string]: any } & { children: string }
+) => (
+  <>
+    {props.children.split("").map((letter, index) => (
+      <AnimateIntoView
+        as="span"
+        className="letter"
+        key={index}
+        style={{ transitionDelay: `${index * 50}ms` }}
+      >
+        {letter}
+      </AnimateIntoView>
+    ))}
+  </>
+)
+
+const AnimateIntoView = (props: { [key: string]: any }) => (
+  <InView
+    as="div"
+    onChange={(inView, entry) => {
+      entry.target.classList.toggle("--in-view", inView)
+    }}
+    {...props}
+    className={"--hidden" + (props.className ? " " + props.className : "")}
+  />
 )

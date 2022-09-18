@@ -20,8 +20,10 @@ section {
   margin: 20vh 0;
 }
 
-h1 {
+h1.ani-grani {
 	background: linear-gradient(-45deg, #6355a4, #6355a4, #e89a3e, #e89a3e);
+	background: linear-gradient(-45deg, #0167ff, #0167ff, #3ee877, #3ee877);
+	background: linear-gradient(-45deg, #0167ff, #0199ff, #f02043, #f14965);
 	background-size: 300%;
 	text-transform: uppercase;
 	letter-spacing: -5px;
@@ -32,7 +34,7 @@ h1 {
 	-webkit-animation: animated_text 10s ease-in-out infinite;
 }
 
-h2 {
+h2.ani-grani {
 	background: linear-gradient(-45deg, #235, #235, #856, #78c, #458, #346, #235, #235);
 	background-size: 600%;
 	/* text-transform: uppercase; */
@@ -42,6 +44,8 @@ h2 {
 	animation: animated_text2 40s linear infinite;
 	-moz-animation: animated_text2 40s linear infinite;
 	-webkit-animation: animated_text2 40s linear infinite;
+  display: inline-block;
+  line-height: 1.4;
 }
 
 @keyframes animated_text {
@@ -53,4 +57,31 @@ h2 {
 @keyframes animated_text2 {
 	0% { background-position: 0px 50%; }
 	100% { background-position: 600% 50%; }
+}
+
+section.--hidden {
+  opacity: 0;
+  filter: blur(15px);
+  transform: scale(0.8);
+}
+section.--in-view {
+  opacity: 1;
+  filter: blur(0px);
+  transform: scale(1);
+  transition: opacity 1.5s, filter .5s, transform .5s;
+}
+
+span.letter.--hidden {
+  visibility: hidden;
+  opacity: 0;
+  filter: blur(15px);
+  transform: scale(2);
+  /* display: inline-block; */
+}
+span.letter.--in-view {
+  visibility: visible;
+  opacity: 1;
+  filter: blur(0px);
+  transform: scale(1);
+  transition: opacity .8s, filter .5s, transform .5s;
 }
