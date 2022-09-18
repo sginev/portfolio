@@ -13,7 +13,7 @@ body {
   margin-bottom: 50vh;
 }
 
-h1 {
+h1.section-header {
   margin: 40vh 0 20vh 0;
 }
 section {
@@ -74,14 +74,31 @@ section.--in-view {
 span.letter.--hidden {
   visibility: hidden;
   opacity: 0;
-  filter: blur(15px);
-  transform: scale(2);
-  /* display: inline-block; */
+  filter: blur(15px 0);
+  transform: translateX(-20px) rotate3d(0, 1, 0, 180deg);
+  display: inline-block;
 }
 span.letter.--in-view {
   visibility: visible;
   opacity: 1;
   filter: blur(0px);
-  transform: scale(1);
+  transform: translateX(0px) rotate3d(0, 0, 0, 0);
   transition: opacity .8s, filter .5s, transform .5s;
+}
+
+.headroom {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  transition: background-color .5s;
+}
+.headroom.headroom--pinned {
+  background-color: rgba(40, 20, 80, 0.1);
+  backdrop-filter: blur(10px);
+  min-height: 80px;
+}
+.headroom pre {
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
 }
