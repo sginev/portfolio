@@ -38,6 +38,7 @@ export default function Home() {
       <Headroom>
         <pre>You can put anything you'd like inside the Headroom Component</pre>
       </Headroom>
+
       <div id="app">
         <h1>Hello world!</h1>
 
@@ -57,7 +58,7 @@ export default function Home() {
         {yamlPages.map((page, index) => {
           return (
             <section>
-              <h2>{page.path}</h2>
+              <h2>{page.name}</h2>
               {page.content.map((data, index) => {
                 return <p> {data.item} </p>
               })}

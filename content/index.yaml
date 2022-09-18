@@ -1,4 +1,5 @@
 - path: "/page1"
+  name: "Creating Static Pages Using CreatePage"
   content:
     - item: one item
     - item: two items
@@ -7,6 +8,7 @@
     - to: "/page2"
     - to: "/page5"
 - path: "/page2"
+  name: "Creating Dynamic Pages Using CreatePages"
   content:
     - item:
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -18,6 +20,7 @@
   links:
     - to: "/page1"
 - path: "/page3"
+  name: "A CDN Will Not Always Make Your Site Faster"
   content:
     - item: Cupcake ipsum dolor sit amet tootsie roll sesame snaps chupa chups.
         Sugar plum chupa chups topping I love carrot cake I love marshmallow dessert.
@@ -32,6 +35,7 @@
         Gummies soufflé candy. Candy canes muffin chocolate brownie pudding.
   links: []
 - path: "/page4"
+  name: "How to Use the Gatsby Image Sharp Plugin"
   content:
     - item:
         Lorem ipsum dolor amet mustache knausgaard +1, blue bottle waistcoat tbh
@@ -43,6 +47,7 @@
     - to: "/page5"
     - to: "/page1"
 - path: "/page5"
+  name: "Continuous Deployment Pipeline for React Apps"
   content:
     - item: St. agur blue cheese queso cheesecake.
         Cheesecake the big cheese monterey jack cheesecake monterey jack paneer halloumi rubber cheese.
