@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 
 import Typography from "typography"
 
@@ -34,16 +34,24 @@ const typography = new Typography({
 typography.injectStyles()
 
 export default function Home() {
+  const goToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    })
+  }
+
   return (
     <>
-      <Headroom>
-        <pre>You can put anything you'd like inside the Headroom Component</pre>
+      <Headroom onUnfix={() => console.log(`123`)}>
+        <h1 className="ani-grani">Portfolio</h1>
+        {/* <h1 className="ani-grani" style={{ display: "inline", whiteSpace: "break-spaces" }}>Stefan Ginev</h1> */}
+        {/* <h2 className="ani-grani" style={{ display: "inline", whiteSpace: "break-spaces" }}>Portfolio</h2> */}
+        {/* <pre onClick={goToTop}>Portfolio — Stefan Ginev</pre> */}
       </Headroom>
 
       <div id="app">
-        {/* <h1 className="ani-grani">Hello world!</h1> */}
-
-        <h1>
+        <h1 className="section-header">
           <StaggerLetters>Hello world!</StaggerLetters>
         </h1>
 
@@ -60,7 +68,7 @@ export default function Home() {
 
         {/* <h1 className="ani-grani">YAML Data</h1> */}
 
-        <h1>
+        <h1 className="section-header">
           <StaggerLetters>YAML Data</StaggerLetters>
         </h1>
 
@@ -86,16 +94,19 @@ const StaggerLetters = (
   props: { [key: string]: any } & { children: string }
 ) => (
   <>
-    {props.children.split("").map((letter, index) => (
-      <AnimateIntoView
-        as="span"
-        className="letter"
-        key={index}
-        style={{ transitionDelay: `${index * 50}ms` }}
-      >
-        {letter}
-      </AnimateIntoView>
-    ))}
+    {props.children
+      .replace(" ", "•")
+      .split("")
+      .map((letter, index) => (
+        <AnimateIntoView
+          as="span"
+          className="letter"
+          key={index}
+          style={{ transitionDelay: `${index * 60}ms` }}
+        >
+          {letter}
+        </AnimateIntoView>
+      ))}
   </>
 )
 
